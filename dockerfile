@@ -3,7 +3,8 @@ FROM python:3.7.7 as base
 # Installations
 RUN pip install snowflake-connector-python  && \
 pip install pytest && \
-pip install pytest-html 
+pip install pytest-html && \
+pip install pytest-cov
 
 # Code Copy
 COPY . /app/
