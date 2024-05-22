@@ -54,12 +54,13 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+        git clone --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
         cp report.html gh-pages/
         cd gh-pages
         git add report.html
         git commit -m "Update test report"
         git push origin gh-pages
+        
 
     - name: Stop and remove Docker Compose services
       run: docker-compose down
