@@ -1,0 +1,7 @@
+SNOWFLAKE_USER ='Testuser',
+SNOWFLAKE_PASSWORD ='Snowtest5*',
+SNOWFLAKE_ACCOUNT='sjrdkku-gp34174',
+SNOWFLAKE_WAREHOUSE='COMPUTE_WH',
+SNOWFLAKE_DATABASE='Customer_Onboarding',
+SNOWFLAKE_SCHEMA='Customer_Onboarding'
+    

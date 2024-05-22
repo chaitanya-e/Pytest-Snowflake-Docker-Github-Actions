@@ -1,0 +1,7 @@
+FROM python:3.7.7 as base
+WORKDIR /app
+COPY . /app
+RUN pip install snowflake-connector-python  && \
+pip install pytest
+WORKDIR /app/tests
+CMD py.test
