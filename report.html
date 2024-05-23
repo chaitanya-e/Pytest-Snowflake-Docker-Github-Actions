@@ -253,9 +253,9 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 22-May-2024 at 12:51:14 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 23-May-2024 at 11:51:43 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>6 tests ran in 4.10 seconds. </p>
+    <p>6 tests ran in 4.39 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -271,34 +271,34 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_itemcosts.py::test_itemcosts_data_integrity</td>
-          <td class="col-duration">3.30</td>
+          <td class="col-duration">3.43</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f25bb465610&gt;<br/><br/>    @pytest.mark.itemcosts<br/>    def test_itemcosts_data_integrity(db_cursor):<br/>        db_cursor.execute(&quot;SELECT product_key, day_date, store_id, unit_cost, date_extracted FROM H_ITEMCOSTS&quot;)<br/>        result = db_cursor.fetchall()<br/>        for row in result:<br/>            assert row[0] is not None, &quot;product_key is None&quot;<br/>            assert row[1] is not None, &quot;day_date is None&quot;<br/>            assert row[2] is not None, &quot;store_id is None&quot;<br/>&gt;           assert row[3] is not None and row[3] &gt; 0, &quot;unit_cost is not positive&quot;<br/><span class="error">E           AssertionError: unit_cost is not positive</span><br/><span class="error">E           assert (-262212.0 is not None and -262212.0 &gt; 0)</span><br/><br/>test_itemcosts.py:11: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f057df08210&gt;<br/><br/>    @pytest.mark.itemcosts<br/>    def test_itemcosts_data_integrity(db_cursor):<br/>        db_cursor.execute(&quot;SELECT product_key, day_date, store_id, unit_cost, date_extracted FROM H_ITEMCOSTS&quot;)<br/>        result = db_cursor.fetchall()<br/>        for row in result:<br/>            assert row[0] is not None, &quot;product_key is None&quot;<br/>            assert row[1] is not None, &quot;day_date is None&quot;<br/>            assert row[2] is not None, &quot;store_id is None&quot;<br/>&gt;           assert row[3] is not None and row[3] &gt; 0, &quot;unit_cost is not positive&quot;<br/><span class="error">E           AssertionError: unit_cost is not positive</span><br/><span class="error">E           assert (-262212.0 is not None and -262212.0 &gt; 0)</span><br/><br/>test_itemcosts.py:11: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_locations.py::test_address_completeness</td>
-          <td class="col-duration">0.09</td>
+          <td class="col-duration">0.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f25bb1fcd10&gt;<br/><br/>    @pytest.mark.locations<br/>    def test_address_completeness(db_cursor):<br/>        db_cursor.execute(&quot;SELECT address1, city, state, zip FROM h_locations&quot;)<br/>        result = db_cursor.fetchall()<br/>        for row in result:<br/>            assert row[0] is not None, &quot;address1 is None&quot;<br/>            assert row[1] is not None, &quot;city is None&quot;<br/>&gt;           assert row[2] is not None, &quot;state is None&quot;<br/><span class="error">E           AssertionError: state is None</span><br/><span class="error">E           assert None is not None</span><br/><br/>test_locations.py:10: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f055c40fa90&gt;<br/><br/>    @pytest.mark.locations<br/>    def test_address_completeness(db_cursor):<br/>        db_cursor.execute(&quot;SELECT address1, city, state, zip FROM h_locations&quot;)<br/>        result = db_cursor.fetchall()<br/>        for row in result:<br/>            assert row[0] is not None, &quot;address1 is None&quot;<br/>            assert row[1] is not None, &quot;city is None&quot;<br/>&gt;           assert row[2] is not None, &quot;state is None&quot;<br/><span class="error">E           AssertionError: state is None</span><br/><span class="error">E           assert None is not None</span><br/><br/>test_locations.py:10: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_products.py::test_unique_product_key</td>
-          <td class="col-duration">0.22</td>
+          <td class="col-duration">0.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f25b81cddd0&gt;<br/><br/>    @pytest.mark.products<br/>    def test_unique_product_key(db_cursor):<br/>        db_cursor.execute(&quot;SELECT product_key FROM H_products&quot;)<br/>        result = db_cursor.fetchall()<br/>        product_keys = [row[0] for row in result]<br/>&gt;       assert len(product_keys) == len(set(product_keys)), &quot;Duplicate product_key found&quot;<br/><span class="error">E       AssertionError: Duplicate product_key found</span><br/><span class="error">E       assert 16196 == 16191</span><br/><span class="error">E        +  where 16196 = len([&#x27;41234&#x27;, &#x27;27219&#x27;, &#x27;22882&#x27;, &#x27;48548&#x27;, &#x27;22465&#x27;, &#x27;47390&#x27;, ...])</span><br/><span class="error">E        +  and   16191 = len({&#x27;1&#x27;, &#x27;10000&#x27;, &#x27;10003&#x27;, &#x27;10005&#x27;, &#x27;10008&#x27;, &#x27;10013&#x27;, ...})</span><br/><span class="error">E        +    where {&#x27;1&#x27;, &#x27;10000&#x27;, &#x27;10003&#x27;, &#x27;10005&#x27;, &#x27;10008&#x27;, &#x27;10013&#x27;, ...} = set([&#x27;41234&#x27;, &#x27;27219&#x27;, &#x27;22882&#x27;, &#x27;48548&#x27;, &#x27;22465&#x27;, &#x27;47390&#x27;, ...])</span><br/><br/>test_products.py:7: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">db_cursor = &lt;snowflake.connector.cursor.SnowflakeCursor object at 0x7f057c884590&gt;<br/><br/>    @pytest.mark.products<br/>    def test_unique_product_key(db_cursor):<br/>        db_cursor.execute(&quot;SELECT product_key FROM H_products&quot;)<br/>        result = db_cursor.fetchall()<br/>        product_keys = [row[0] for row in result]<br/>&gt;       assert len(product_keys) == len(set(product_keys)), &quot;Duplicate product_key found&quot;<br/><span class="error">E       AssertionError: Duplicate product_key found</span><br/><span class="error">E       assert 16196 == 16191</span><br/><span class="error">E        +  where 16196 = len([&#x27;41234&#x27;, &#x27;27219&#x27;, &#x27;22882&#x27;, &#x27;48548&#x27;, &#x27;22465&#x27;, &#x27;47390&#x27;, ...])</span><br/><span class="error">E        +  and   16191 = len({&#x27;1&#x27;, &#x27;10000&#x27;, &#x27;10003&#x27;, &#x27;10005&#x27;, &#x27;10008&#x27;, &#x27;10013&#x27;, ...})</span><br/><span class="error">E        +    where {&#x27;1&#x27;, &#x27;10000&#x27;, &#x27;10003&#x27;, &#x27;10005&#x27;, &#x27;10008&#x27;, &#x27;10013&#x27;, ...} = set([&#x27;41234&#x27;, &#x27;27219&#x27;, &#x27;22882&#x27;, &#x27;48548&#x27;, &#x27;22465&#x27;, &#x27;47390&#x27;, ...])</span><br/><br/>test_products.py:7: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_locations.py::test_latitude_longitude</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -307,7 +307,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_tenders.py::test_tender_amount</td>
-          <td class="col-duration">0.06</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -316,7 +316,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_tenders.py::test_non_null_store_id</td>
-          <td class="col-duration">0.16</td>
+          <td class="col-duration">0.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
